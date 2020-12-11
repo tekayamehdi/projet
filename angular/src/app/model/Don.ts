@@ -1,4 +1,5 @@
 export class Don {
-    DonId: number;
-    description: string;
+  DonId: number;
+  donDescription: string;
+  typeDon: string;
 }

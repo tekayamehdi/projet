@@ -11,6 +11,7 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CreatedonComponent } from './createdon/createdon.component';
+import { DonListComponent } from './don-list/don-list.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { CreatedonComponent } from './createdon/createdon.component';
         HomeComponent,
         ProfileComponent,
         CreatedonComponent,
+        DonListComponent,
     ],
     imports: [
         BrowserModule,

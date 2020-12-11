@@ -7,6 +7,9 @@ import {HomeComponent} from './home/home.component';
 import {AdmindashboardComponent} from './admindashboard/admindashboard.component';
 import {ProfileComponent} from './profile/profile.component';
 import {CreatedonComponent} from './createdon/createdon.component';
+import {DonListComponent} from './don-list/don-list.component';
+
+
 
 
 const routes: Routes = [
@@ -16,6 +19,7 @@ const routes: Routes = [
     {path: 'admin', component: AdmindashboardComponent},
     {path: 'profile', component: ProfileComponent},
     {path: 'createdon', component: CreatedonComponent},
+    {path: 'listdons', component: DonListComponent},
 
 ];
 
