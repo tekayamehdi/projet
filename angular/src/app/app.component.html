@@ -1,43 +1,55 @@
 <div id="app">
-<nav class="navbar navbar-expand navbar-light bg-light">
-  <a href="#" class="navbar-brand">Ness El Khir</a>
-  <ul class="navbar-nav mr-auto" routerLinkActive="active">
-    <li class="nav-item">
-      <a href="/home" class="nav-link" routerLink="home">Home </a>
-    </li>
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <a href="#" class="navbar-brand">Ness El Khir</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">Home </a>
+      </li>
 
-    <li class="nav-item">
-      <a href="/createdon" class="nav-link" routerLink="createdon">Make A Donation</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">
-        Donation</a>
-    </li>
-   <li class="nav-item" *ngIf="showAdminBoard">
-      <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
-    </li>
-  </ul>
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <a href="/createdon" class="nav-link" routerLink="createdon">Make A Donation</a>
+      </li>
 
-  <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
-    <li class="nav-item">
-      <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
-    </li>
-    <li class="nav-item">
-      <a href="/login" class="nav-link" routerLink="login">Login</a>
-    </li>
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+      </li>
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/listdons" class="nav-link" routerLink="listdons">list of donations</a>
+      </li>
+    </ul>
 
-  </ul>
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">Login</a>
+      </li>
 
-  <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-    <li class="nav-item">
-      <a href="/profile" class="nav-link" routerLink="profile">Hello There, {{ username }}</a>
-    </li>
-    <li class="nav-item">
-      <a href class="nav-link" (click)="logout()">Logout</a>
-    </li>
-  </ul>
-</nav>
-<div class="container">
-  <router-outlet></router-outlet>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">Hello There, {{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-</div>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <p> Made with love by Ness El Khir</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+

@@ -18,8 +18,14 @@ import javax.persistence.Table;
 		    private long DonId;
 			private String donDescription;
 			private String typeDon;
-			
-		    public String getTypeDon() {
+			private long somme;
+		    public long getSomme() {
+				return somme;
+			}
+			public void setSomme(long somme) {
+				this.somme = somme;
+			}
+			public String getTypeDon() {
 				return typeDon;
 			}
 			public void setTypeDon(String typeDon) {

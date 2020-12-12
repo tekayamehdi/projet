@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {Don} from '../model/Don';
 import {Router} from '@angular/router';
 import {DonService} from '../don.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {AppComponent} from '../app.component';
+import {FormControl} from '@angular/forms';
 
 @Component({
     selector: 'app-createdon',
@@ -11,12 +14,16 @@ import {DonService} from '../don.service';
 export class CreatedonComponent implements OnInit {
     don: Don = new Don();
     submitted = false;
+    private roles: string[];
 
     constructor(private donService: DonService,
-                private router: Router) {
+                private router: Router,
+                private http: HttpClient) {
     }
 
     ngOnInit(): void {
+
+
     }
 
     newDon(): void {

@@ -41,10 +41,10 @@ public class DonController {
 	    
 	    
 	    @DeleteMapping("/dons/{id}")
-	    public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Long donId)
+	    public Map<String, Boolean> deleteDon(@PathVariable(value = "id") Long Id)
 	         throws ResourceNotFoundException {
-	        Don don= donRepository.findById(donId)
-	       .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + donId));
+	        Don don= donRepository.findById(Id)
+	       .orElseThrow(() -> new ResourceNotFoundException("don not found for this id :: " + Id));
 
 	        donRepository.delete(don);
 	        Map<String, Boolean> response = new HashMap<>();

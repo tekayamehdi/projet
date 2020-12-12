@@ -15,11 +15,12 @@ export class DonService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  createDon(employee: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, employee);
+  createDon(don: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, don);
   }
-
-
+  deletedon(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  }
 
 
   getDonsList(): Observable<any> {

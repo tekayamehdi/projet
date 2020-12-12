@@ -1,6 +1,10 @@
 <div class="col-md-12">
     <div class="card card-container">
-        <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card"/>
+        <img
+                id="profile-img"
+                src="https://www.habitat.org/sites/default/files/styles/2_1_default/public/hero_images/children_reading_book_uganda_habitat_for_humanity.jpg?h=bde28bee&itok=GYpZx9x6"
+                class="profile-img-card" height="350" width="1049"
+        />
         <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
             <div class="form-group">
                 <label for="username">Username</label>

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {TokenStorageService} from './shared/token-storage.service';
+import {ChangeDetectorRef} from '@angular/core';
 
 @Component({
     selector: 'app-root',
